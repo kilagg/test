@@ -1,0 +1,10 @@
+{% extends '/app/base_app.html' %} {% block content %} 
+<div id="my-gallery">
+    {%for image in images%} 
+    <div>
+        <h1>{{image.title}}</h1>
+        <img src="{{ image.uri }}" />
+    </div>
+    {%endfor%}
+</div> 
+{% endblock %}

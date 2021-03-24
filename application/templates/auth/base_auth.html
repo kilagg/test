@@ -1,0 +1,10 @@
+{% include '/base.html' %}
+<div id="log-in-page">
+    <div class="image">
+        <img src="{{ url_for('static', filename='/img/preview.png') }}" alt="Image cool"></img>
+    </div>
+    <div class="login">
+        <img src="{{ url_for('static', filename='/img/logo.svg') }}" alt="Logo"></img>
+    {% block content %}{% endblock %}
+    </div>
+</div>

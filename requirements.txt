@@ -1,1 +1,13 @@
-Flask==1.0.2
+Flask
+Flask-JWT-Extended
+Flask-RESTful
+Flask-SqlAlchemy
+passlib
+PyJWT
+pytz
+six
+SQLAlchemy
+Werkzeug
+mysql-connector-python
+pandas
+pyodbc

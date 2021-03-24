@@ -1,0 +1,21 @@
+{% extends '/app/base_app.html' %} 
+{% block content %} 
+<div id="sell">
+    <form method="post" enctype=multipart/form-data>
+<<<<<<< HEAD
+        <input type="file" id="file-selector" name="file" accept=".jpg, .jpeg, .png">
+        <input type="text" placeholder="Title" name="title" minlength="1" maxlength="15">
+=======
+        <input type="file" id="file-selector" name="file" accept=".jpg, .jpeg, .png" required>
+        <input type="number" placeholder="Price" name="price" required>
+        <input type="number" placeholder="Sale Duration" name="duration" min="1" max="24" required>
+        <input type="text" placeholder="Title" name="title" minlength="1" maxlength="15" required>
+        <label class="switch">
+            <input type="checkbox" name="private">
+            <span class="slider round"></span>
+        </label>
+>>>>>>> 1754ce064c766b838b139e75de2185e8a5b72a1b
+        <button type="submit" name="sell">Sell</button>
+    </form>
+</div> 
+{% endblock %}

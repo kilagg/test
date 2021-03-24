@@ -1,0 +1,18 @@
+{% extends '/auth/base_auth.html' %}
+{% block content %}
+<form method="post">
+    <input name="email" placeholder="Email" type="text" required minlength="4">
+    <input name="password" placeholder="Password" type="password" required minlength="8" size="15">
+    <input name="username" placeholder="User Name" type="text" required minlength="4" size="15">
+    <input name="fullname" placeholder="Full Name" type="text" required minlength="1" size="15">
+    <button type="submit" id="login-button" name="register" class="fat">Register</button>
+    {% with messages = get_flashed_messages() %} {% if messages %} <span class=errors> {{ messages[-1] }} {% endif %} {% endwith %}
+</form>
+
+
+<p>By signing up you agree to our <a>Terms of Service</a> and <a>Privacy Policy</a>. </p>
+<p>Already have an account?</p>
+<form action="" method="POST">
+    <button type="submit" name="login" value="login" id="login-switch-button" class="inline">Login</button>
+</form>
+{% endblock %}

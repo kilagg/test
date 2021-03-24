@@ -1,0 +1,148 @@
+:root{
+    --base-color: #015657;
+    --lead-color: #F1C40F;
+    --lead-color-lighter: #F3D55B;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    color: var(--base-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    margin: 0px;
+    height: 100%;
+}
+
+body {
+    background-color: #f5f5f5;
+    margin: 0px;
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#log-in-page {
+  display: grid;
+  max-width: 100%;
+  max-height: 100%;
+  grid-template-columns: 10% 35% 10% 35% 10%;
+  grid-template-rows: 90% 10%;
+  grid-template-areas:
+    "m1 image m2 login m3"
+    "footer footer footer footer footer";
+}
+
+#log-in-page .image{
+    grid-area: image;
+}
+
+#log-in-page .login{
+    position: relative;
+    grid-area: login;
+}
+
+.login form {
+    width: 400px;
+}
+
+.login input {
+    margin: 40px 25px;
+    width: 80%;
+    display: block;
+    border: none;
+    padding: 10px 0;
+    border-bottom: solid 1px var(--base-color);
+    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, var(--base-color) 4%);
+    background-position: -200px 0;
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    color: darken(var(--base-color), 20%);
+}
+
+.login input:focus {
+    border: none;
+}
+
+.login button.fat {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: var(--lead-color-lighter);
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-size: 100% 100%;
+}
+
+.login button.fat:hover {
+    background-color: var(--lead-color);
+}
+
+#log-in-page .footer {
+    grid-area: footer;
+}
+
+.left {
+    position: relative;
+    left: 240px;
+    top: -40px;
+}
+
+.login button.inline {
+    cursor: pointer;
+    font-size: small;
+    color: var(--lead-color) ;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+p {
+    font-size: small;
+    position: relative;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+.footer .break-line {
+    height: 1px;
+    background-color: lightgray;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+}
+
+.registration-element {
+    display: none;
+}
+
+#pictures-feed {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 1%;
+    margin: auto;
+}
